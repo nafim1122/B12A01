@@ -52,6 +52,15 @@
             font-weight: bold;
             color: #6366f1;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo-img {
+            height: 24px;
+            width: auto;
+            vertical-align: middle;
         }
 
         .signup-btn {
@@ -650,6 +659,10 @@ e        .testimonial-card {
             color: #6366f1;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
         }
 
         .footer-logo:hover {
@@ -796,7 +809,10 @@ e        .testimonial-card {
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <div class="logo">LOGO</div>
+            <div class="logo">
+                <img src="Assets/logo.png" alt="Workflow Logo" class="logo-img">
+                Workflow
+            </div>
             <button class="signup-btn">Sign Up</button>
         </header>
 
@@ -940,7 +956,10 @@ e        .testimonial-card {
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-logo">LOGO</div>
+            <div class="footer-logo">
+                <img src="Assets/canvas.png" alt="Workflow Logo" class="logo-img">
+                Workflow
+            </div>
             <p>Ready to elevate your online presence? Contact us today to discuss your project and discover how we can bring your vision to life.</p>
         </footer>
     </div>
