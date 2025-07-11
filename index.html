@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Dark UI Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #1e293b;
+            background-image: url('Assets/Hero-bg.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            max-width: 1200px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #6366f1;
+            text-transform: uppercase;
+        }
+
+        .signup-btn {
+            background: #6366f1;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            background: #5b21b6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 5% 80px;
+            min-height: 80vh;
+            background: rgba(255, 255, 255, 0.8);
+            background-image: url("Assets/Hero-bg.png");
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .hero-mockup {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hero-mockup:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero-mockup img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        
+
+        .hero p {
+            color: #475569;
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 500px;
+            text-align: left;
+            grid-area: 25px;
+        }
+
+        .hero-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+            margin: 95px ;
+           
+            
+        }
+
+        .hero-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Action Section */
+        .action-section {
+            padding: 100px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .action-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .action-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .action-image {
+            flex: 1;
+        }
+
+        .action-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .action-description {
+            color: #475569;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .action-btn {
+            background: #6366f1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background: #5b21b6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .mockup {
+            background: #1f2937;
+            border-radius: 16px;
+            padding: 40px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            max-width: 900px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .mockup:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .mockup img, .cta-mockup img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .mockup img:hover, .cta-mockup img:hover {
+            transform: scale(1.02);
+        }
+
+        .mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ef4444, #f97316);
+            border-radius: 0 12px 0 100%;
+        }
+
+        .mockup h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mockup p {
+            font-size: 14px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 5%;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stats-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .stats-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .stats-numbers {
+            flex: 1;
+        }
+
+        .stats-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .stats-description {
+            color: #475569;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+        }
+        
+        .stat-item {
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-number.blue { color: #60a5fa; }
+        .stat-number.purple { color: #a78bfa; }
+        .stat-number.green { color: #4ade80; }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 5%;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .testimonials-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+
+ implement
+e        .testimonial-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1;
+            min-width: 280px;
+            max-width: 380px;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-card p {
+            font-size: 12px;
+            color: #475569;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 5%;
+            background: #ffffff;
+            border: 2px solid #3b82f6;
+            margin: 60px auto;
+            border-radius: 16px;
+            max-width: 1100px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .cta-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .cta-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .cta-image {
+            flex: 1;
+        }
+        
+        .cta-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .cta-badge {
+            background: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #60a5fa;
+        }
+
+        .cta-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .cta-subtitle {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .cta-mockup {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 40px;
+            color: #1e293b;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto 0;
+            max-width: 800px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .cta-mockup img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .cta-mockup::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #10b981, #06b6d4);
+            border-radius: 100% 0 8px 0;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 80px 5%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .contact-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .contact-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .contact-description {
+            color: #475569;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+            color: #475569;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #1e293b;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+            background: #f8fafc;
+        }
+
+        .submit-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.3);
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 5%;
+            text-align: center;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6366f1;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero, .stats, .testimonials {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .stats {
+            animation-delay: 0.2s;
+        }
+
+        .testimonials {
+            animation-delay: 0.4s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-grid {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+                display: flex;
+                justify-items: center;
+                margin: 20px 15px;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 60px 5%;
+                min-height: 50vh;
+                margin: 25px 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .mockup, .cta-mockup {
+                padding: 20px;
+            }
+        }
+
+        /* Stats Section - Updated */
+        .stats {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .stats-container {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 60px 5%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stats-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .stats-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            flex: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.1);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover .stat-number {
+            transform: scale(1.25);
+        }
+
+        .stat-number.blue { color: #60a5fa; }
+        .stat-number.purple { color: #a78bfa; }
+        .stat-number.green { color: #4ade80; }
+
+        .stat-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">LOGO</div>
+            <button class="signup-btn">Sign Up</button>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Cool Dark UI Template for Webflow Agencies!</h1>
+                    <a href="#" class="hero-btn">Stay Focused</a>
+                    <img src="hero-bg.png" alt="" srcset="">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Section -->
+        <section class="action-section">
+            <div class="action-container">
+                <div class="action-text">
+                    <h2 class="action-title">See It in Action</h2>
+                    <p class="action-description">Experience our powerful template designed specifically for Webflow agencies. Boost your productivity and impress your clients.</p>
+                    <button class="action-btn">Preview Template</button>
+                </div>
+                <div class="action-image">
+                    <div class="mockup">
+                        
+                       
+                        <img src="Assets/wc-mini.png" alt="Webflow Conference 2022">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section - Updated -->
+        <section class="stats">
+            <div class="stats-container">
+                <div class="stats-content">
+                    <div class="stats-text">
+                        <h2 class="stats-title">Joined Thousands of Productive Users</h2>
+                        <p class="stats-description">Our template has helped businesses of all sizes create professional websites that convert visitors into customers.</p>
+                    </div>
+                    <div class="stats-numbers">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number blue">50K</div>
+                                <div class="stat-label">Active Users</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number purple">2M+</div>
+                                <div class="stat-label">Focus Sessions</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number blue">95%</div>
+                                <div class="stat-label">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2 class="testimonials-title">What our users say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <h4>Loved by Designers</h4>
+                    <p>This template instantly leveled up our presence.</p>
+                    <img src="Assets/avatar.png" alt="">
+                    <div class="author">Studio Vertex • 25-2-2025</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <h4>Perfect for Agencies</h4>
+                    <p>Our clients were impressed with how quickly we delivered their site.</p>
+                    <img src="Assets/avatar.png" alt="" srcset="">
+                    <div class="author">Digital Craft • 1-12-2025</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <h4>Boosted Conversions</h4>
+                    <p>We saw a 40% increase in leads after implementing this template.</p>
+                    <class><img src="Assets/avatar.png" alt="" srcset=""></class>
+                    <div class="author">Growth Labs • 1-12-25</div>
+                    
+                    
+                
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-text">
+                   
+                    <h2 class="cta-title">Ready to focus better</h2>
+                    <p class="cta-subtitle">Transform your productivity with our template</p>
+                    <button class="cta-btn">Get Started Now</button>
+                </div>
+                <div class="cta-image">
+                    <div class="cta-mockup">
+                        
+                        <img src="Assets/wc-big.png" alt="Webflow Conference 2022 Showcase">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h2>Let's Get in<br>Touch</h2>
+                    <p class="contact-description">Have questions about our template? Need custom modifications? We're here to help you create the perfect website for your business.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>Email:</strong> hello@example.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong> +1 (555) 123-4567
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo">LOGO</div>
+            <p>Ready to elevate your online presence? Contact us today to discuss your project and discover how we can bring your vision to life.</p>
+        </footer>
+    </div>
+</body>
+</html>
